@@ -30,7 +30,7 @@ public class Grid {
     return (int) (col - Character.valueOf('A'));
   }
 
-  // ==================== Painting ====================
+  // Painting //
 
   public void paint(Graphics g, Point mousePos) {
     for (int i = 0; i < cells.length; i++) {
@@ -47,7 +47,7 @@ public class Grid {
     }
   }
 
-  // ==================== Cell lookup helpers ====================
+  // Cell lookup helpers //
 
   public Optional<Cell> cellAtColRow(int c, int r) {
     if (c >= 0 && c < cells.length && r >= 0 && r < cells[c].length) {
@@ -95,7 +95,7 @@ public class Grid {
     return Arrays.stream(cells).flatMap(Arrays::stream);
   }
 
-  // ==================== Weather mapping helpers ====================
+  //  Weather mapping helpers //
 
   /**
    * Convert weather coordinates (0,0 at centre) into our grid indices.
@@ -116,7 +116,7 @@ public class Grid {
     return Optional.empty(); // outside grid
   }
 
-  // ==================== Weather behaviours (called from Stage) ====================
+  // Weather behaviours (called from Stage) //
 
   // Rain: increase water level at the target cell
   public void applyRain(WeatherEvent e) {

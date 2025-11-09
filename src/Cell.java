@@ -63,7 +63,7 @@ public class Cell extends Rectangle {
         return Integer.compare(row, c.row);
     }
 
-    // ===== Weather helper methods =====
+    // Weather helper methods //
 
     // Increase/decrease water level safely (0..1)
     public void addWater(double amount) {

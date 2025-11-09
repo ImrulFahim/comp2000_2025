@@ -15,7 +15,7 @@ public class Client {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://13.238.167.130/weather")) // IMPORTANT
+                .uri(URI.create("http://13.238.167.130/weather")) //Server URL
                 .header("Accept", "text/event-stream")
                 .build();
 
@@ -31,8 +31,8 @@ public class Client {
 
                             WeatherEvent event = parseLine(line);
                             if (event != null) {
-                                System.out.println("Weather: " + event); // debug
-                                onEvent.accept(event); // send into Stage
+                                System.out.println("Weather: " + event); 
+                                onEvent.accept(event);                  // send into Stage
                             }
                         }
                     } catch (IOException e) {

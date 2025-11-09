@@ -44,7 +44,7 @@ public class Main extends JFrame {
 
         @Override
         public void paint(Graphics g) {
-            super.paint(g); // clear background
+            super.paint(g);                        // clear background
             Point mousePos = getMousePosition();
             if (stage != null) {
                 stage.paint(g, mousePos);

@@ -44,6 +44,7 @@ Client.java
 Implemented a real-time HTTP client using HttpClient to connect to http://13.238.167.130/weather.
 Converts each incoming line into a WeatherEvent object and delivers it to the Stage through a callback function.
 Used lambdas and method references for clean, event-driven design (stage::applyWeather).
+A tester is added to quick debug mode—run Client.java → see weather events printed live in the terminal.
 
 WeatherUpdate.java
 

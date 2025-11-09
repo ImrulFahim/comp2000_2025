@@ -117,7 +117,7 @@ public class Stage {
     currentState.mouseClick(x, y, this);
   }
 
-  // ===================== WEATHER ENTRY POINT =====================
+  // WEATHER ENTRY POINT //
 
   /**
    * Called by Client via lambda: stage.applyWeather(event)
@@ -126,7 +126,7 @@ public class Stage {
     weatherSystem.handle(event);
   }
 
-  // ===================== WEATHER SYSTEM (Strategy-style) =====================
+  //  WEATHER SYSTEM (Strategy-style) //
 
   /**
    * Encapsulates mapping from attribute -> behaviour.
@@ -142,7 +142,7 @@ public class Stage {
       this.effects = Map.of(
           "rain", Grid::applyRain,
           "temp", Grid::applyTemp
-          // You can add "windx" and "windy" later if you implement them
+          
       );
     }
 
