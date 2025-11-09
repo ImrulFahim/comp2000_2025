@@ -65,4 +65,4 @@ public class Client {
         startWeatherStream(System.out::println);
     }
 }
-    
+
